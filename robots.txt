@@ -1,0 +1,5 @@
+# Not indexed, but freely reachable by anyone with the link - Meta has to be
+# able to open this page to verify the business, and merchants get the link
+# directly. Delete this file when the product is ready to be found in search.
+User-agent: *
+Disallow: /

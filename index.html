@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وكيل — موظف خدمة عملاء يرد على زبائنك</title>
+<meta name="description" content="وكيل يرد على زبائن متجرك على واتساب وإنستغرام وماسنجر، بالعربي العراقي، نصاً وصوتاً، ويثبّت الطلبات ويوصلها لك.">
+
+<!--
+  Reachable by anyone with the link - which it must be, since Meta opens it to
+  verify the business - but kept out of search results. The page is for Meta
+  and for merchants the link is sent to, not for competitors browsing.
+  Remove this line when the product is ready to be found.
+-->
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:title" content="وكيل — موظف خدمة عملاء يرد على زبائنك">
+<meta property="og:description" content="يرد على واتساب وإنستغرام وماسنجر بالعراقي، ويثبّت الطلبات ويوصلها لك.">
+<meta property="og:locale" content="ar_IQ">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/*
+ * وكيل — landing page.
+ *
+ * The product's whole claim is that a reply sounds like a person rather than
+ * software. So the hero does not assert that; it plays a real exchange at the
+ * real rhythm the delivery worker uses - read receipt, a pause to think, the
+ * typing bubble held for about as long as the message would take to type.
+ * Everything else on the page stays quiet so that one moment carries it.
+ *
+ * Colour comes from Iraqi tilework rather than from WhatsApp: a deep turquoise
+ * on pale plaster, with brass used exactly once.
+ */
+
+:root {
+  --ground:      #EDF1EF;
+  --ground-warm: #F6F8F6;
+  --ink:         #10201F;
+  --ink-soft:    #334745;
+  --muted:       #5E6F6C;
+  --rule:        #CDD8D5;
+
+  --turquoise:      #17857A;
+  --turquoise-deep: #0E5F57;
+  --turquoise-wash: #D9EDE8;
+  --brass:          #A67C1A;
+
+  --bubble-in:  #FFFFFF;
+  --bubble-out: #D9EDE8;
+
+  --display: 'Reem Kufi', system-ui, sans-serif;
+  --body: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+
+  --gutter: 16px;
+  --max: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+p { margin: 0; }
+
+a { color: var(--turquoise-deep); }
+
+:focus-visible {
+  outline: 2px solid var(--turquoise);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* An eyebrow marks what kind of thing follows, so it is a word, not a number. */
+.eyebrow {
+  font-family: var(--body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--turquoise-deep);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* ------------------------------------------------------------- masthead */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: var(--ground-warm);
+}
+
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 68px;
+}
+
+.mark {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--turquoise-deep);
+  letter-spacing: 0;
+}
+
+.mark span {
+  color: var(--brass);
+}
+
+.masthead nav {
+  display: flex;
+  gap: 22px;
+  font-size: 15px;
+}
+
+.masthead nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.masthead nav a:hover { color: var(--turquoise-deep); }
+
+@media (max-width: 680px) {
+  .masthead nav { display: none; }
+}
+
+/* ----------------------------------------------------------------- hero */
+
+.hero {
+  padding: 68px 0 76px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5.4vw, 58px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--turquoise-deep);
+}
+
+.lede {
+  margin-top: 22px;
+  font-size: clamp(17px, 2.1vw, 20px);
+  color: var(--ink-soft);
+  max-width: 34em;
+  line-height: 1.8;
+}
+
+.actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-family: var(--body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background .15s ease, color .15s ease;
+}
+
+.btn-primary {
+  background: var(--turquoise-deep);
+  color: #fff;
+}
+
+.btn-primary:hover { background: var(--ink); }
+
+.btn-quiet {
+  border-color: var(--rule);
+  color: var(--ink-soft);
+}
+
+.btn-quiet:hover { border-color: var(--turquoise); color: var(--turquoise-deep); }
+
+@media (max-width: 900px) {
+  .hero { padding: 44px 0 52px; }
+  .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ------------------------------------------------- the phone (signature) */
+
+.phone {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 26px;
+  padding: 10px;
+  box-shadow: 0 24px 48px -28px rgba(16, 32, 31, .4);
+  justify-self: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+.phone-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--turquoise-wash);
+  color: var(--turquoise-deep);
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 17px;
+  flex: none;
+}
+
+.who { line-height: 1.3; }
+.who b { font-size: 15px; font-weight: 600; display: block; }
+
+.who small {
+  font-size: 12.5px;
+  color: var(--muted);
+  display: block;
+  min-height: 18px;
+}
+
+.who small.typing { color: var(--turquoise-deep); }
+
+.thread {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-height: 330px;
+  background:
+    linear-gradient(180deg, rgba(217,237,232,.32), rgba(217,237,232,0) 160px);
+}
+
+.msg {
+  max-width: 84%;
+  padding: 9px 13px;
+  border-radius: 15px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.msg.them {
+  align-self: flex-start;
+  background: var(--bubble-in);
+  border: 1px solid var(--rule);
+  border-end-start-radius: 5px;
+}
+
+.msg.us {
+  align-self: flex-end;
+  background: var(--bubble-out);
+  border-end-end-radius: 5px;
+}
+
+/* JS hides these, then reveals them on the product's own timing. Without JS
+   the whole exchange is simply there, which is the correct fallback. */
+.js .msg { display: none; }
+.js .msg.shown { display: block; animation: rise .26s ease both; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.dots {
+  align-self: flex-end;
+  display: none;
+  gap: 4px;
+  padding: 11px 14px;
+  background: var(--bubble-out);
+  border-radius: 15px;
+  border-end-end-radius: 5px;
+}
+
+.dots.on { display: flex; }
+
+.dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--turquoise-deep);
+  opacity: .45;
+  animation: blink 1.25s infinite;
+}
+
+.dots i:nth-child(2) { animation-delay: .18s; }
+.dots i:nth-child(3) { animation-delay: .36s; }
+
+@keyframes blink {
+  0%, 60%, 100% { opacity: .35; transform: none; }
+  30%           { opacity: 1; transform: translateY(-2px); }
+}
+
+.phone-note {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--muted);
+  padding: 6px 10px 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .msg { display: block; }
+  .dots { display: none !important; }
+  .js .msg.shown { animation: none; }
+  .dots i { animation: none; }
+}
+
+/* ------------------------------------------------------------- sections */
+
+section { padding: 68px 0; }
+
+.band {
+  background: var(--ground-warm);
+  border-block: 1px solid var(--rule);
+}
+
+.section-head { max-width: 40em; margin-bottom: 42px; }
+
+.section-head h2 {
+  font-size: clamp(26px, 3.6vw, 38px);
+}
+
+.section-head p {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 17.5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  gap: 26px;
+}
+
+.card h3 {
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.card p {
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+.card .icon {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 14px;
+  color: var(--turquoise-deep);
+}
+
+.card .icon svg { width: 100%; height: 100%; }
+
+/* --------------------------------------------------------------- how it works
+   Numbered because this genuinely is a sequence: each step depends on the one
+   before it, and a merchant reading it needs the order. */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.step {
+  padding: 28px 26px 30px;
+  border-bottom: 1px solid var(--rule);
+  border-inline-start: 1px solid var(--rule);
+}
+
+.step:first-child { border-inline-start: none; }
+
+.step .n {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brass);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.step h3 { font-size: 18px; margin-bottom: 8px; }
+.step p { color: var(--ink-soft); font-size: 15.5px; }
+
+@media (max-width: 820px) {
+  .step { border-inline-start: none; }
+}
+
+/* -------------------------------------------------------------- channels */
+
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 17px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.chip svg { width: 17px; height: 17px; color: var(--turquoise-deep); }
+
+/* --------------------------------------------------------------- pricing */
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.plan {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 30px 28px;
+}
+
+.plan.featured { border-color: var(--turquoise); }
+
+.plan .tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--turquoise-deep);
+  text-transform: uppercase;
+}
+
+.plan h3 { font-size: 21px; margin: 12px 0 6px; }
+
+.plan .price {
+  font-family: var(--display);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 16px 0 4px;
+}
+
+.plan .price small {
+  font-family: var(--body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.plan ul {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15.5px;
+  color: var(--ink-soft);
+}
+
+.plan li {
+  padding-inline-start: 22px;
+  position: relative;
+  margin-bottom: 9px;
+}
+
+.plan li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--turquoise-wash);
+  border: 1.5px solid var(--turquoise);
+}
+
+/* --------------------------------------------------------------- contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.contact-grid dt {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.contact-grid dd {
+  margin: 0;
+  font-size: 17px;
+}
+
+.contact-grid dd a { text-decoration: none; }
+.contact-grid dd a:hover { text-decoration: underline; }
+
+/* ---------------------------------------------------------------- footer */
+
+footer {
+  border-top: 1px solid var(--rule);
+  background: var(--ground-warm);
+  padding: 30px 0;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+</style>
+</head>
+
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mark">وكيل<span>.</span></div>
+    <nav>
+      <a href="#what">شنو يسوي</a>
+      <a href="#how">شلون يشتغل</a>
+      <a href="#pricing">الأسعار</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>زبونك يسأل الساعة وحدة بالليل.<br><em>وكيل يرد عليه.</em></h1>
+
+        <p class="lede">
+          موظف خدمة عملاء يشتغل على واتساب وإنستغرام وماسنجر. يحچي عراقي،
+          يرد نصاً وصوتاً، ويجاوب من معلومات متجرك إنت — مو من اختراعه.
+          ولمّا يثبّت طلب، يوصلك فوراً.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">خلّينا نتواصل</a>
+          <a class="btn btn-quiet" href="#how">شوف شلون يشتغل</a>
+        </div>
+      </div>
+
+      <!-- The signature: a real exchange, played at the timing the delivery
+           worker actually uses. -->
+      <div class="phone" aria-label="مثال على محادثة مع زبون">
+        <div class="phone-bar">
+          <div class="avatar">ز</div>
+          <div class="who">
+            <b>زينب — متجر النور</b>
+            <small id="status">متصلة</small>
+          </div>
+        </div>
+
+        <div class="thread" id="thread">
+          <div class="msg them">هلو، شكد سعر القميص الأبيض؟</div>
+          <div class="msg us">هلا بيك. الرسمي الأبيض بـ٣٢ ألف، والكاجوال بـ٢٥.</div>
+          <div class="msg them">اكو قياس لارج؟</div>
+          <div class="msg us">اي اكو. تريد رسمي لو كاجوال؟</div>
+          <div class="msg them">رسمي. وشلون التوصيل لكربلاء؟</div>
+          <div class="msg us">التوصيل لكربلاء بـ٥ آلاف، يوصلك خلال ٣ لـ٥ أيام.</div>
+          <div class="msg us">اعطيني اسمك والعنوان وأثبّتلك الطلب.</div>
+
+          <div class="dots" id="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+
+        <p class="phone-note">محادثة حقيقية، بنفس سرعة الرد الفعلية</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="what" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">شنو يسوي</div>
+        <h2>يرد مثل موظف يعرف شغله</h2>
+        <p>
+          مو روبوت يرد بجُمل جاهزة. يفهم سؤال الزبون، يدوّر بمعلومات متجرك،
+          ويجاوب بلهجته.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4z"/>
+            </svg>
+          </div>
+          <h3>يحچي عراقي</h3>
+          <p>
+            «اكو»، «هسه»، «شكد»، «خوش». ويطابق لهجة الزبون — إذا كتب خليجي
+            أو مصري، يرد بيها.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/>
+            </svg>
+          </div>
+          <h3>يفهم الفويس ويرد بفويس</h3>
+          <p>
+            الزبون يرسل رسالة صوتية، وكيل يفهمها ويرد عليه بصوت طبيعي.
+            وإذا كتب، يرد كتابة.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/>
+              <path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5A2.5 2.5 0 0 1 4 20.5z"/>
+            </svg>
+          </div>
+          <h3>ما يخترع سعر</h3>
+          <p>
+            يجاوب من المعلومات اللي تكتبها إنت. وإذا ما يعرف، يقول إنه راح
+            يتأكد — مو يخمّن.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6h18M6 6l1.4 12.1A2 2 0 0 0 9.4 20h5.2a2 2 0 0 0 2-1.9L18 6"/>
+              <path d="M9 6V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V6"/>
+            </svg>
+          </div>
+          <h3>يثبّت الطلب ويوصلك بيه</h3>
+          <p>
+            ياخذ الاسم والعنوان والطلب، ويرسله لك على واتساب أو لأي مكان
+            تحدده — بلحظتها.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/>
+              <circle cx="10" cy="7.5" r="3.5"/>
+              <path d="M19 11.5 20.5 13 23 10"/>
+            </svg>
+          </div>
+          <h3>يحوّلك الزبون وقت يحتاج</h3>
+          <p>
+            إذا الزبون زعلان أو طلب يحچي مع إنسان، يحوّله لك فوراً بلا جدال.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2.5"/>
+              <path d="M8 16v-4M12 16V8M16 16v-6"/>
+            </svg>
+          </div>
+          <h3>لوحة تشوف بيها كل شي</h3>
+          <p>
+            كل المحادثات، الطلبات المثبّتة، وشنو يعرف الوكيل — وتعدّلها وقت
+            ما تريد.
+          </p>
+        </div>
+      </div>
+
+      <div class="channels" aria-label="القنوات المدعومة">
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4z"/></svg>
+          واتساب
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+          إنستغرام
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3C6.9 3 3 6.8 3 11.4c0 2.6 1.3 4.9 3.3 6.4V21l3-1.6c.8.2 1.7.3 2.7.3 5.1 0 9-3.8 9-8.4S17.1 3 12 3z"/><path d="M7.5 13.2 10.2 10l2.2 2.2L15.9 10l-2.9 3.2-2.2-2.2z"/></svg>
+          ماسنجر
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">شلون يشتغل</div>
+        <h2>ثلاث خطوات، وتنسى الموضوع</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="n">الخطوة الأولى</span>
+          <h3>نربط حساباتك</h3>
+          <p>
+            رقم واتساب متجرك، وصفحة إنستغرام وماسنجر إذا عندك. الربط نسويه
+            إحنا — إنت ما تسوي شي تقني.
+          </p>
+        </div>
+
+        <div class="step">
+          <span class="n">الخطوة الثانية</span>
+          <h3>نكتب معلومات متجرك</h3>
+          <p>
+            الأسعار، القياسات، التوصيل، الاستبدال، أوقات الدوام. هذي هي اللي
+            يجاوب منها — ونعدّلها وقت ما تتغيّر.
+          </p>
+        </div>
+
+        <div class="step">
+          <span class="n">الخطوة الثالثة</span>
+          <h3>يبدأ يرد</h3>
+          <p>
+            على مدار اليوم، بلا انتظار. والطلبات توصلك أول بأول، وتتابع كل
+            شي من اللوحة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">الأسعار</div>
+        <h2>ادفع بالطريقة اللي تناسبك</h2>
+        <p>
+          إذا ما تعرف شقد راح تستفيد، ابدأ بالدفع على الطلب — ما تدفع إلا
+          لمّا تكسب.
+        </p>
+      </div>
+
+      <div class="plans">
+        <div class="plan featured">
+          <div class="tag">الأكثر إنصافاً</div>
+          <h3>على كل طلب مثبّت</h3>
+          <div class="price">٢٬٠٠٠ <small>دينار / طلب</small></div>
+          <ul>
+            <li>ما تدفع شي إلا لمّا وكيل يثبّت طلب</li>
+            <li>الطلب الملغي ما ينحسب عليك</li>
+            <li>بلا التزام شهري</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <div class="tag">للمتاجر المزدحمة</div>
+          <h3>اشتراك شهري</h3>
+          <div class="price">مبلغ ثابت <small>/ شهر</small></div>
+          <ul>
+            <li>عدد طلبات بلا حد</li>
+            <li>أرخص إذا عندك طلبات هوايه</li>
+            <li>السعر حسب حجم متجرك</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">تواصل</div>
+        <h2>شوفه على متجرك قبل ما تقرر</h2>
+        <p>
+          راسلنا ونربطه على متجرك تجربة. تشوف شلون يرد على زبائنك الحقيقيين،
+          وبعدها تقرر.
+        </p>
+      </div>
+
+      <dl class="contact-grid">
+        <div>
+          <dt>البريد الإلكتروني</dt>
+          <dd><a href="mailto:haiderabdulhuseen@gmail.com">haiderabdulhuseen@gmail.com</a></dd>
+        </div>
+        <div>
+          <dt>واتساب</dt>
+          <!-- wa.me rather than tel: - this is the number merchants message,
+               and a tap should open the chat, not the dialler. -->
+          <dd><a href="https://wa.me/9647873464536">0787 346 4536</a></dd>
+        </div>
+        <div>
+          <dt>الموقع</dt>
+          <dd>بغداد، العراق</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>وكيل — خدمة رد آلي للمتاجر العراقية</span>
+    <span>بغداد، العراق</span>
+  </div>
+</footer>
+
+<script>
+/*
+ * Play the exchange at the product's own rhythm.
+ *
+ * The timings are the ones the delivery worker uses: a pause to read and
+ * think, then the typing bubble held roughly as long as the message would
+ * take to type. Getting this wrong in either direction is what makes a demo
+ * feel like software - too fast reads as a script, too slow reads as broken.
+ */
+(function () {
+  var root = document.documentElement;
+  var thread = document.getElementById('thread');
+  var dots = document.getElementById('dots');
+  var status = document.getElementById('status');
+  if (!thread || !dots || !status) return;
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduced.matches) return;
+
+  // Only now hide the messages: if this script never runs, the whole
+  // conversation stays visible, which is the honest fallback.
+  root.classList.add('js');
+
+  var msgs = Array.prototype.slice.call(thread.querySelectorAll('.msg'));
+  var TYPING_CPS = 22;     // characters a second, about a fast thumb
+  var READ_MS = 700;       // the pause before the typing bubble appears
+  var BETWEEN_MS = 900;    // a customer's own gap between messages
+
+  var timers = [];
+  function after(ms, fn) { timers.push(setTimeout(fn, ms)); }
+  function clearAll() { timers.forEach(clearTimeout); timers = []; }
+
+  function reset() {
+    clearAll();
+    msgs.forEach(function (m) { m.classList.remove('shown'); });
+    dots.classList.remove('on');
+    status.textContent = 'متصلة';
+    status.classList.remove('typing');
+  }
+
+  function play(i) {
+    if (i >= msgs.length) {
+      after(4200, function () { reset(); play(0); });
+      return;
+    }
+
+    var msg = msgs[i];
+    var ours = msg.classList.contains('us');
+
+    if (!ours) {
+      msg.classList.add('shown');
+      after(BETWEEN_MS, function () { play(i + 1); });
+      return;
+    }
+
+    // Ours: read, then type for about as long as the words would take.
+    var typingMs = Math.min(2600, Math.max(700, (msg.textContent.length / TYPING_CPS) * 1000));
+
+    after(READ_MS, function () {
+      dots.classList.add('on');
+      status.textContent = 'تكتب…';
+      status.classList.add('typing');
+      thread.appendChild(dots);
+
+      after(typingMs, function () {
+        dots.classList.remove('on');
+        status.textContent = 'متصلة';
+        status.classList.remove('typing');
+        msg.classList.add('shown');
+        thread.appendChild(dots);
+        after(BETWEEN_MS, function () { play(i + 1); });
+      });
+    });
+  }
+
+  // Do not run until it is on screen - a demo nobody is watching is just
+  // noise, and on a phone it costs battery for nothing.
+  if ('IntersectionObserver' in window) {
+    var started = false;
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && !started) { started = true; play(0); }
+      });
+    }, { threshold: 0.3 }).observe(thread);
+  } else {
+    play(0);
+  }
+
+  reduced.addEventListener('change', function (e) {
+    if (e.matches) { clearAll(); root.classList.remove('js'); }
+  });
+})();
+</script>
+
+</body>
+</html>
