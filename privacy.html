@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية — وكيل</title>
+<meta name="description" content="أي بيانات يجمعها وكيل، ولماذا، وكم يبقيها، وكيف تطلب حذفها.">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/*
+ * The privacy policy, on the same type and colour as the rest of the site.
+ *
+ * Written to be read rather than to be complied with: a merchant deciding
+ * whether to point their customers at this, and a customer wondering who just
+ * answered them, should both be able to find their answer in one pass. Meta
+ * reads it too, and compares it against what the app actually does - so every
+ * claim here matches the system as built.
+ */
+
+:root {
+  --ground:      #EDF1EF;
+  --ground-warm: #F6F8F6;
+  --ink:         #10201F;
+  --ink-soft:    #334745;
+  --muted:       #5E6F6C;
+  --rule:        #CDD8D5;
+  --turquoise:      #17857A;
+  --turquoise-deep: #0E5F57;
+  --brass:          #A67C1A;
+
+  --display: 'Reem Kufi', system-ui, sans-serif;
+  --body: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--turquoise-deep); }
+
+:focus-visible {
+  outline: 2px solid var(--turquoise);
+  outline-offset: 3px;
+}
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: var(--ground-warm);
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+}
+
+.mark {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--turquoise-deep);
+  text-decoration: none;
+}
+
+.mark span { color: var(--brass); }
+
+.masthead a.back {
+  font-size: 15px;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.masthead a.back:hover { color: var(--turquoise-deep); }
+
+main { padding: 56px 0 72px; }
+
+h1 {
+  font-family: var(--display);
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 0 0 8px;
+}
+
+.lede {
+  font-size: 18.5px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+}
+
+h2 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 42px 0 12px;
+  color: var(--turquoise-deep);
+}
+
+h3 {
+  font-family: var(--body);
+  font-size: 16.5px;
+  font-weight: 600;
+  margin: 24px 0 6px;
+}
+
+p { margin: 0 0 14px; }
+
+ul {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-inline-start: 20px;
+  margin-bottom: 9px;
+  color: var(--ink-soft);
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 13px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid var(--turquoise);
+}
+
+li b { color: var(--ink); font-weight: 600; }
+
+/* The one thing a reader is most likely to have come here to find. */
+.callout {
+  background: var(--ground-warm);
+  border: 1px solid var(--rule);
+  border-inline-start: 3px solid var(--turquoise);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 24px 0;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+dl.contact {
+  margin: 18px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+dl.contact dt {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+dl.contact dd { margin: 0; font-size: 16.5px; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  background: var(--ground-warm);
+  padding: 26px 0;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="mark" href="./">وكيل<span>.</span></a>
+    <a class="back" href="./">الصفحة الرئيسية</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <h1>سياسة الخصوصية</h1>
+    <p class="updated">آخر تحديث: ٢٧ أيلول ٢٠٢٦</p>
+    <p class="lede">
+      وكيل خدمة ترد على زبائن المتاجر نيابةً عنها على واتساب وإنستغرام وماسنجر.
+      هذي الصفحة تشرح أي بيانات نتعامل معها، وليش، وكم نبقيها، وشلون تطلب حذفها.
+    </p>
+
+    <h2>من المسؤول عن بياناتك</h2>
+    <p>
+      لما تراسل متجراً يستعمل وكيل، هناك طرفان:
+    </p>
+    <ul>
+      <li><b>المتجر</b> هو صاحب المحادثة والمسؤول الأول عن بياناتك — هو الذي قرر استعمال الخدمة.</li>
+      <li><b>وكيل</b> يعالج البيانات نيابةً عن المتجر، وبحدود ما يحتاجه للرد عليك.</li>
+    </ul>
+    <p>
+      يعني: إذا تريد نسخة من بياناتك أو حذفها، تقدر تراسلنا مباشرة أو تراسل
+      المتجر — والنتيجة وحدة.
+    </p>
+
+    <h2>شنو نجمع</h2>
+    <p>ما نجمع إلا ما يوصلنا من المحادثة نفسها:</p>
+    <ul>
+      <li><b>رسائلك</b> — النص الذي ترسله للمتجر وردودنا عليه.</li>
+      <li><b>الرسائل الصوتية</b> — نحوّلها إلى نص حتى نفهمها ونرد عليها.</li>
+      <li><b>اسمك ورقمك</b> كما يعطيهما واتساب أو إنستغرام أو ماسنجر للمتجر.</li>
+      <li><b>تفاصيل طلبك</b> إذا ثبّت طلباً — الاسم والعنوان ورقم الهاتف والمنتج.</li>
+      <li>
+        <b>معلومات تقنية</b> — وقت الرسالة، القناة، ومعرّفات تقنية تستعملها منصة
+        ميتا لتوجيه الرسائل.
+      </li>
+    </ul>
+
+    <div class="callout">
+      <p>
+        <b>ما نجمع أبداً:</b> جهات اتصالك، صورك، موقعك الجغرافي، سجل تصفحك، ولا
+        أي شي خارج المحادثة مع المتجر. وما نقرأ محادثاتك مع أي جهة ثانية —
+        تقنياً ما نقدر.
+      </p>
+    </div>
+
+    <h2>ليش نستعملها</h2>
+    <ul>
+      <li>حتى نرد على سؤالك بمعلومات المتجر الصحيحة.</li>
+      <li>حتى نثبّت طلبك ونوصله لصاحب المتجر.</li>
+      <li>حتى نحوّلك لموظف بشري إذا طلبت أو إذا احتاج الموضوع ذلك.</li>
+      <li>حتى نحسب عدد الطلبات المثبّتة لأغراض المحاسبة مع المتجر.</li>
+    </ul>
+    <p>
+      <b>ما نستعمل بياناتك للإعلانات، ولا نبيعها، ولا نأجّرها لأي جهة.</b>
+      وما ندرّب عليها نماذج ذكاء اصطناعي خاصة بنا.
+    </p>
+
+    <h2>مين يشوفها غيرنا</h2>
+    <p>
+      حتى نفهم سؤالك ونصيغ رداً، نرسل نص المحادثة إلى مزوّدي نماذج لغوية:
+    </p>
+    <ul>
+      <li><b>Google</b> (Gemini) — لفهم النص والرسائل الصوتية وتوليد الرد والصوت.</li>
+      <li><b>Anthropic</b> (Claude) — لتوليد الرد في بعض الحالات.</li>
+    </ul>
+    <p>
+      هذولا يعالجون النص لحظياً ليردّوا، وبحسب شروطهم للأعمال لا يستعملون هذا
+      المحتوى لتدريب نماذجهم.
+    </p>
+    <p>
+      وتمر رسائلك كذلك عبر <b>منصة ميتا</b> (واتساب، إنستغرام، ماسنجر) لأنها
+      القناة التي راسلت المتجر عبرها، وتخضع لسياسة خصوصية ميتا.
+    </p>
+    <p>
+      خارج هؤلاء: لا أحد. ما نشارك بياناتك مع معلنين ولا وسطاء بيانات ولا متاجر
+      ثانية. وكل متجر معزول عن غيره — ما يشوف محادثات متجر ثاني إطلاقاً.
+    </p>
+
+    <h2>كيف نحميها</h2>
+    <ul>
+      <li>الاتصالات كلها مشفّرة أثناء النقل (HTTPS).</li>
+      <li>
+        مفاتيح دخول المتاجر لحساباتها مخزّنة مشفّرة بـ AES-256-GCM، ولا تُطبع في
+        السجلات ولا تُعرض مرة ثانية بعد حفظها.
+      </li>
+      <li>كل ويبهوك يوصلنا من ميتا يُتحقق من توقيعه قبل قبوله.</li>
+      <li>الوصول للوحة التحكم محمي بكلمة مرور وصلاحيات محدّدة لكل مستخدم.</li>
+    </ul>
+
+    <h2>كم نبقيها</h2>
+    <ul>
+      <li><b>المحادثات والرسائل الصوتية:</b> ١٢ شهراً، حتى يقدر المتجر يرجع لطلبك أو شكواك.</li>
+      <li><b>الطلبات:</b> ٢٤ شهراً، لأنها سجل محاسبي بين وكيل والمتجر.</li>
+      <li><b>السجلات التقنية:</b> ٩٠ يوماً.</li>
+    </ul>
+    <p>بعد هذي المدد تُحذف تلقائياً. وتقدر تطلب حذفها قبلها.</p>
+
+    <h2>حقوقك</h2>
+    <p>تقدر تطلب في أي وقت:</p>
+    <ul>
+      <li>نسخة من بياناتك المحفوظة عندنا.</li>
+      <li>تصحيح معلومة غلط.</li>
+      <li>حذف بياناتك.</li>
+      <li>إيقاف معالجة بياناتك — ويعني هذا أن الوكيل ما يعود يرد عليك، ويحوّلك لموظف.</li>
+    </ul>
+    <p>
+      راسلنا على البريد أو الواتساب أدناه ونرد خلال <b>٣٠ يوماً</b>. الطلب مجاني.
+    </p>
+
+    <div class="callout">
+      <p>
+        <b>لو تريد تتكلم مع إنسان بدل الوكيل:</b> اكتب «أريد موظف» بالمحادثة، ويحوّلك
+        فوراً بلا جدال. ما تحتاج تراسلنا هنا لهالشي.
+      </p>
+    </div>
+
+    <h2>الأطفال</h2>
+    <p>
+      الخدمة موجّهة لزبائن المتاجر البالغين. ما نجمع بيانات عن قصد ممن هم دون
+      ١٣ سنة، وإذا وصلتنا بيانات كهذي نحذفها.
+    </p>
+
+    <h2>تغييرات على هذي السياسة</h2>
+    <p>
+      إذا تغيّرت، نحدّث تاريخ «آخر تحديث» فوق. والتغييرات الجوهرية نبلّغ بيها
+      المتاجر المشتركة حتى تبلّغ زبائنها.
+    </p>
+
+    <h2>تواصل معنا</h2>
+    <dl class="contact">
+      <div>
+        <dt>البريد الإلكتروني</dt>
+        <dd><a href="mailto:haiderabdulhuseen@gmail.com">haiderabdulhuseen@gmail.com</a></dd>
+      </div>
+      <div>
+        <dt>واتساب</dt>
+        <dd><a href="https://wa.me/9647873464536">0787 346 4536</a></dd>
+      </div>
+      <div>
+        <dt>الموقع</dt>
+        <dd>بغداد، العراق</dd>
+      </div>
+    </dl>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">وكيل — خدمة رد آلي للمتاجر العراقية · بغداد، العراق</div>
+</footer>
+
+</body>
+</html>
