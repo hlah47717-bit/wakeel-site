@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!--
+    The app mark: the letter و.
+    Source for icon.png. Regenerate with:  node scripts/build-icon.cjs
+    (An XML comment cannot contain two hyphens in a row, so the flags of any
+    command line belong outside it - that is what broke the first conversion.)
+
+    The first draft attached the tail to the lower *left* of the loop and ran
+    it out diagonally, which is the geometry of a magnifying glass - a search
+    icon on a messaging product. In a real waw the tail leaves the loop at the
+    lower right, drops, and then sweeps left in a deep bowl. That S is the
+    whole character of the letter, and it is also what stops the mark reading
+    as anything else.
+
+    Colour is the deep turquoise of Iraqi tilework, which is also the site's.
+  -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17857A"/>
+      <stop offset="1" stop-color="#0B4F48"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#tile)"/>
+
+  <g stroke="#F2F6F4" stroke-width="86" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The loop, kept small so the tail carries the form. -->
+    <circle cx="628" cy="360" r="132"/>
+    <!-- Out of the loop's lower right, down, then the bowl sweeping left. -->
+    <path d="M 716 452
+             C 748 610, 690 736, 520 792
+             C 424 822, 336 806, 296 752"/>
+  </g>
+</svg>
